@@ -1,0 +1,33 @@
+@page "/Register"
+@model RegisterModel
+@{
+    ViewData["Title"] = "Đăng kí";
+}
+<h1>Đăng Ký</h1>
+@if (ViewData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @ViewData["ErrorMessage"]
+    </div>
+}
+else if (ViewData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @ViewData["SuccessMessage"]
+    </div>
+}
+<form method="post">
+    <div class="btn">
+        <label for="FullName">Họ và tên:</label>
+        <input type="text" id="FullName" name="FullName" required />
+    </div>
+    <div class="btn">
+        <label for="username">Tài Khoản:</label>
+        <input type="text" id="username" name="username" required />
+    </div>
+    <div class="btn">
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" name="password" required />
+    </div>
+    <button type="submit">Đăng ký</button>
+</form>

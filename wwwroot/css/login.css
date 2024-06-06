@@ -1,0 +1,8 @@
+.btn {
+    display: flex;
+    text-align: left;
+}
+
+.btn input{
+    margin-left: 30px;
+}
